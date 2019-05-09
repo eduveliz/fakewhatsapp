@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import Icon from 'react-native-vector-icons/FontAwesome5';
+import Message from 'react-native-vector-icons/MaterialIcons';
 import {StyleSheet, Text, View} from 'react-native';
 import {heightPercentageToDP as hp, widthPercentageToDP as wp} from 'react-native-responsive-screen';
 
@@ -9,8 +11,9 @@ export default class Header extends Component {
                 <View>
                     <Text style={styles.title}>WhatsApp</Text>
                 </View>
-                <View>
-                    <Text> Icons</Text>
+                <View style={{flexDirection: "row", justifyContent: "space-between"}}>
+                    <Icon color={"white"} name="search" size={20}/>
+                    <Message color={"white"} name="message" size={20}/>
                 </View>
             </View>
         );
